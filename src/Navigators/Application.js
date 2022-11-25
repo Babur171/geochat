@@ -11,6 +11,7 @@ import {OTP} from '@/Screens/Otp'
 import { useTheme } from '@/Hooks'
 import MainNavigator from './Main'
 import { navigationRef } from './utils'
+import { ChattingList } from '@/Screens/ChattingList'
 
 const Stack = createStackNavigator()
 
@@ -24,7 +25,7 @@ const ApplicationNavigator = () => {
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Startup" component={Welcome} />
+          <Stack.Screen name="Startup" component={ChattingList} />
           <Stack.Screen
             name="Main"
             component={Welcome}
@@ -56,6 +57,13 @@ const ApplicationNavigator = () => {
           <Stack.Screen
             name="OTP"
             component={OTP}
+            options={{
+              animationEnabled: false,
+            }}
+          />
+           <Stack.Screen
+            name="ChattingList"
+            component={ChattingList}
             options={{
               animationEnabled: false,
             }}

@@ -27,6 +27,7 @@ const Welcome = ({ navigation }) => {
 
                 <View style={styles.buttonContainer}>
                     <Button
+                        buttonWidth={320}
                         buttonText="Lets Start"
                         style={styles.button}
                         backgroundColor="#4285F4"
