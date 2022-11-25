@@ -81,6 +81,7 @@ export const SignUp = ({ navigation }) => {
 
                     <View style={styles.buttonContainer}>
                         <Button
+                        buttonWidth={320}
                             buttonText="Sign Up"
                             style={styles.button}
                             backgroundColor="#4285F4"

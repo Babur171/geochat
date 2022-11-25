@@ -71,7 +71,8 @@ export const SignIn = ({ navigation }) => {
 
                     <View style={styles.buttonContainer}>
                         <Button
-                            buttonText="Sign Up"
+                        buttonWidth={320}
+                            buttonText="Login"
                             style={styles.button}
                             backgroundColor="#4285F4"
                             textColor="#000"

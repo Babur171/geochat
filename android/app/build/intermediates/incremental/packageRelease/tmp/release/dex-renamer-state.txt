@@ -1,4 +1,0 @@
-#Fri Nov 25 02:35:30 PKT 2022
-base.0=/home/workspace/Geochat/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

@@ -11,6 +11,7 @@ export const Button = params => {
     const textColor = params.textColor || "#fff";
     const btnStyle = {
         backgroundColor: backgroundColor,
+        width: params.buttonWidth || null
     };
     const btnText = {
         color: textColor
@@ -54,7 +55,6 @@ const buttonStyles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: "center",
         alignItems: "center",
-        width: 350,
         flexDirection: "row"
     },
     btnText: {
