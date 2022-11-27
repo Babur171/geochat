@@ -77,7 +77,7 @@ export const SignIn = ({ navigation }) => {
                             backgroundColor="#4285F4"
                             textColor="#000"
                             hideShadow
-                            onPress={() => navigation.navigate("signup")}
+                            onPress={() => navigation.navigate("ChattingList")}
                         />
                     </View>
 

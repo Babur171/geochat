@@ -2,8 +2,8 @@ import React from "react";
 import {  StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
     container: {
-        lex: 1,
-        width: '100%',
+        flex: 1,
+        // width: '100%',
     },
     heading: {
         marginTop: "20%",
@@ -39,13 +39,14 @@ export const styles = StyleSheet.create({
         alignItems: "center"
     },
     logo: {
-        resizeMode: "contain",
-        width: 42,
-        height: 63,
+        resizeMode: "cover",
+        width: 323,
+        height: 315,
       },
       titleContainer:{
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        flex:1
       }
 });

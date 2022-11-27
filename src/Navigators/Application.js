@@ -6,14 +6,17 @@ import { StartupContainer } from '@/Containers'
 import Welcome from '@/Screens/Welcome'
 import { SignUp } from '@/Screens/SignUp'
 import { SignIn } from '@/Screens/SignIn'
-import {Language} from '@/Screens/Language'
-import {OTP} from '@/Screens/Otp'
+import { Language } from '@/Screens/Language'
+import { OTP } from '@/Screens/Otp'
 import { useTheme } from '@/Hooks'
 import MainNavigator from './Main'
 import { navigationRef } from './utils'
 import { ChattingList } from '@/Screens/ChattingList'
+import GetStart from '@/Screens/GetStart'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 const Stack = createStackNavigator()
+const Tab = createBottomTabNavigator()
 
 // @refresh reset
 const ApplicationNavigator = () => {
@@ -25,10 +28,16 @@ const ApplicationNavigator = () => {
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Startup" component={ChattingList} />
           <Stack.Screen
             name="Main"
             component={Welcome}
+            options={{
+              animationEnabled: false,
+            }}
+          />
+          <Stack.Screen
+            name="GetStart"
+            component={GetStart}
             options={{
               animationEnabled: false,
             }}
@@ -40,14 +49,14 @@ const ApplicationNavigator = () => {
               animationEnabled: false,
             }}
           />
-           <Stack.Screen
+          <Stack.Screen
             name="SignIn"
             component={SignIn}
             options={{
               animationEnabled: false,
             }}
           />
-           <Stack.Screen
+          <Stack.Screen
             name="Language"
             component={Language}
             options={{
@@ -61,18 +70,25 @@ const ApplicationNavigator = () => {
               animationEnabled: false,
             }}
           />
-           <Stack.Screen
-            name="ChattingList"
-            component={ChattingList}
-            options={{
-              animationEnabled: false,
-            }}
-          />
           
-
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
+  )
+}
+
+const BottomBar = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen
+        name="ChattingList"
+        component={ChattingList}
+        options={{
+          tabBarIconStyle: { display: 'none' },
+          tabBarLabelPosition: 'beside-icon',
+        }}
+      />
+    </Tab.Navigator>
   )
 }
 
