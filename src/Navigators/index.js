@@ -23,7 +23,7 @@ const RootNavigationStack = props => {
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
 
         <authStack.Navigator screenOptions={{headerShown: false}}>
-        {true ? (
+        {false ? (
           <authStack.Screen name="MainStack" component={MainNavigator} />
         ) : (
           <mainStack.Screen name="AuthStack" component={AuthStackScreen} />

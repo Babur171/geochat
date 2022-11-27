@@ -105,23 +105,7 @@ export const ChattingList = ({ navigation }) => {
                     }
 
                 </View>
-                <View style={styles.footer}>
-                    <Footer
-                        images={[
-                            // @ts-ignore
-                            require("../../Assets/message.png"),
-                            // @ts-ignore
-                            require("../../Assets/adduser.png"),
-                            // @ts-ignore
-                            require("../../Assets/globe.png"),
-                            // @ts-ignore
-                            require("../../Assets/profile.png")
-                        ]}
-                        routes={['homeScreen', 'orderStatusScreen', 'searchScreen', 'accountScreen']}
-                        navigation={navigation}
-                        titles={["Chats", "Contacts", "Discover", "Me"]}
-                    />
-                </View>
+                
             </ImageBackground>
         </View>
     );

@@ -1,9 +1,6 @@
 import React from "react"
 import { Image, Dimensions, View, Text } from "react-native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-
-const Tab = createBottomTabNavigator()
-
 import {
   ChattingList,
 } from "@/Screens/ChattingList"
@@ -14,6 +11,7 @@ import { ChatInfo } from '@/Screens/ChatInfo'
 import { createStackNavigator } from "@react-navigation/stack"
 
 const mainStack = createStackNavigator()
+const Tab = createBottomTabNavigator()
 
 const { width } = Dimensions.get('window')
 import { Images } from "@/Theme"
