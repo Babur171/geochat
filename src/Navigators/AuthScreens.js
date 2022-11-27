@@ -11,9 +11,10 @@ import GetStart from '@/Screens/GetStart'
 import {
   ChattingList,
 } from "@/Screens/ChattingList"
-import ChooseWallpaper from '@/Screens/ChooseWallpaper'
+import {ChooseImage} from '@/Screens/ChooseImage'
 import { ChatHistory } from '@/Screens/ChatHistory'
 import { ChatInfo } from '@/Screens/ChatInfo'
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 const { width } = Dimensions.get('window')
 
@@ -88,8 +89,8 @@ const BottomNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="ChooseWallpaper"
-        component={ChooseWallpaper}
+        name="ChooseImage"
+        component={ChooseImage}
         options={{
           tabBarLabel: () => (
             <Text style={{ fontSize: 12, lineHeight: 15, fontWeight: '400' }}>Chats</Text>
