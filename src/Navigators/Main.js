@@ -7,6 +7,10 @@ import {
 import ChooseWallpaper from '@/Screens/ChooseWallpaper'
 import { ChatHistory } from '@/Screens/ChatHistory'
 import { ChatInfo } from '@/Screens/ChatInfo'
+import {ChooseBackGround} from '@/Screens/ChooseBackGround'
+import {ChooseImage} from '@/Screens/ChooseImage'
+import {PhotosAndVideos} from '@/Screens/PhotosAndVideos'
+
 
 import { createStackNavigator } from "@react-navigation/stack"
 
@@ -125,6 +129,9 @@ const MainNavigator = () => (
   >
     <mainStack.Screen name="BottomBar" component={BottomNavigator} />
     <mainStack.Screen name="ChooseWallpaper" component={ChooseWallpaper} />
+    <mainStack.Screen name="ChooseBackGround" component={ChooseBackGround} />
+    <mainStack.Screen name="ChooseImage" component={ChooseImage} />
+    <mainStack.Screen name="PhotosAndVideos" component={PhotosAndVideos} />
   </mainStack.Navigator>
 )
 
