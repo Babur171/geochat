@@ -12,33 +12,56 @@ import { Button } from '@/Components/Button'
 
 
 const ChooseWallpaper = ({ navigation }) => {
-//   const [dataa, setDataa] = useState([])
+  //   const [dataa, setDataa] = useState([])
   const data = [
-    require('../../Assets/profile.png'),
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+    { image: require('../../Assets/profile.png') },
+
   ]
-  const renderItem = item => {
-    return (<View style={{ width: 200, height: 200 }}>{item.data}</View>)
+  const renderItem = ({ item }) => {
+    return (
+    <View style={{ flex: 1, }}>
+      <View style={{marginVertical:10}}>
+      <Image source={item.image} style={{ width: 101, height: 107, }}/>
+      </View>
+    </View>)
   }
 
   return (
     <View style={styles.container}>
-      <View style={[styles.titleContainer, { flexDirection: 'row' }]}>
-        <TouchableOpacity>
+      <View style={[styles.titleContainer]}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             // @ts-ignore
-            source={require('../../Assets/back.png')}
+            source={require('../../Assets/backIcon.png')}
             style={styles.logo}
           />
         </TouchableOpacity>
         <Text style={styles.description}>Choose a wallpaper</Text>
+        <View></View>
       </View>
-      <View>
-        <FlatList data={data} renderItem={renderItem} />
-        {/* {data.map((item, index)=>{
-            return(
-<View style={{width:200,height:200, flex:1}}>{item.data}</View>
-            )
-        })} */}
+      <View style={{marginHorizontal:32}}>
+        <FlatList data={data} renderItem={renderItem} numColumns={3} />
+        
       </View>
     </View>
   )
