@@ -12,7 +12,10 @@ import { ChattingList } from "@/Screens/ChattingList";
 import { ChooseImage } from "@/Screens/ChooseImage";
 import { ChatHistory } from "@/Screens/ChatHistory";
 import { ChatInfo } from "@/Screens/ChatInfo";
-import Security from  "@/Screens/Security";
+import Security from "@/Screens/Security";
+import AddContact from "@/Screens/AddContact";
+import EditContact from "@/Screens/EditContact";
+import LinkMobile from "@/Screens/LinkMobile";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 const { width } = Dimensions.get("window");
@@ -67,14 +70,34 @@ const AuthStackScreen = () => (
         animationEnabled: false,
       }}
     />
-      <authStack.Screen
+    <authStack.Screen
       name="Security"
       component={Security}
       options={{
         animationEnabled: false,
       }}
     />
-
+    <authStack.Screen
+      name="AddContact"
+      component={AddContact}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    <authStack.Screen
+      name="EditContact"
+      component={EditContact}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    <authStack.Screen
+      name="LinkMobile"
+      component={LinkMobile}
+      options={{
+        animationEnabled: false,
+      }}
+    />
     <authStack.Screen
       name="BottomNavigator"
       component={BottomNavigator}
