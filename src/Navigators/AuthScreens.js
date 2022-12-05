@@ -16,6 +16,9 @@ import Security from "@/Screens/Security";
 import AddContact from "@/Screens/AddContact";
 import EditContact from "@/Screens/EditContact";
 import LinkMobile from "@/Screens/LinkMobile";
+import {SearchFriends} from "@/Screens/SearchFriends";
+import {Tags} from "@/Screens/Tags";
+
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 const { width } = Dimensions.get("window");
@@ -98,6 +101,21 @@ const AuthStackScreen = () => (
         animationEnabled: false,
       }}
     />
+     <authStack.Screen
+      name="Tags"
+      component={Tags}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+     <authStack.Screen
+      name="SearchFriends"
+      component={SearchFriends}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    
     <authStack.Screen
       name="BottomNavigator"
       component={BottomNavigator}
