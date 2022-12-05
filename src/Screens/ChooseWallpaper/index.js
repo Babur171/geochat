@@ -52,7 +52,7 @@ const ChooseWallpaper = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             // @ts-ignore
-            source={require('../../Assets/backIcon.png')}
+            source={require('../../Assets/back1.png')}
             style={styles.logo}
           />
         </TouchableOpacity>
