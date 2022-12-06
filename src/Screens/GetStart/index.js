@@ -19,7 +19,7 @@ export default GetStart = ({ navigation }) => {
                         style={styles.logo}
                     />
                     <Text style={styles.description}>
-                        uick Chat App
+                        eo Chat App
                     </Text>
                 </View>
                 <View style={styles.buttonContainer}>

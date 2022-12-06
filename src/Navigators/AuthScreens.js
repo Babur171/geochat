@@ -18,6 +18,7 @@ import EditContact from "@/Screens/EditContact";
 import LinkMobile from "@/Screens/LinkMobile";
 import {SearchFriends} from "@/Screens/SearchFriends";
 import {Tags} from "@/Screens/Tags";
+import Contacts from "@/Screens/Contacts";
 
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -135,8 +136,8 @@ const BottomNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="ChooseImage"
-        component={ChooseImage}
+        name="ChattingList"
+        component={ChattingList}
         options={{
           tabBarLabel: () => (
             <Text style={{ fontSize: 12, lineHeight: 15, fontWeight: "400" }}>
@@ -157,8 +158,8 @@ const BottomNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="ChattingList"
-        component={ChattingList}
+        name="Contacts"
+        component={Contacts}
         options={{
           tabBarLabel: () => (
             <Text style={{ fontSize: 12, lineHeight: 15, fontWeight: "400" }}>
