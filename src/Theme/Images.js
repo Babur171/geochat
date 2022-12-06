@@ -16,6 +16,14 @@ export const Images= {
   Back:require("@/Assets/back.png"),
   Phone:require("@/Assets/phone.png"),
   User:require("@/Assets/User.png"),
-  GoogleIcon:require("@/Assets/googleLogo.png")
+  GoogleIcon:require("@/Assets/googleLogo.png"),
+  Plus:require("@/Assets/plus.png"),
+  Search:require("@/Assets/search.png"),
+  OnePerson:require("@/Assets/onePerson.png"),
+  PersonCirle:require("@/Assets/personCirle.png"),
+  PlusPerson:require("@/Assets/plusPerson.png"),
+  BothPerson:require("@/Assets/bothPerson.png"),
+  Tags:require("@/Assets/exploreData.png"),
+  Rectangle1:require("@/Assets/Rectangle1.png"),
 
 }

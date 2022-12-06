@@ -44,7 +44,8 @@ export default AddContact = ({navigation}) => {
             You can link your mobile to find more friemd
           </Text>
         </View>
-        <View style={styles.card}>
+        
+        <TouchableOpacity style={styles.card} onPress={()=>navigation.navigate("LinkMobile")}>
           <View style={styles.boxStyle}>
           <Image
             source={Images.Phone}
@@ -54,7 +55,7 @@ export default AddContact = ({navigation}) => {
             Mobile Contacts
           </Text>
           </View>
-        </View>
+        </TouchableOpacity>
       </ImageBackground>
     </View>
   );
