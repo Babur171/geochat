@@ -19,6 +19,15 @@ import LinkMobile from "@/Screens/LinkMobile";
 import {SearchFriends} from "@/Screens/SearchFriends";
 import {Tags} from "@/Screens/Tags";
 import Contacts from "@/Screens/Contacts";
+import { Discover } from "@/Screens/Discover";
+import { Profile } from "@/Screens/Me";
+import { MyPost } from "@/Screens/MyPost";
+import { MyPost1 } from "@/Screens/MyPost1";
+import { Moments } from "@/Screens/Moments";
+import ChatScreen from "@/Screens/ChatScreen";
+import { PhotosAndVideos } from "@/Screens/PhotosAndVideos";
+import ChooseWallpaper from "@/Screens/ChooseWallpaper";
+import { ChooseBackGround } from "@/Screens/ChooseBackGround";
 
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -116,7 +125,80 @@ const AuthStackScreen = () => (
         animationEnabled: false,
       }}
     />
+     <authStack.Screen
+      name="MyPost"
+      component={MyPost}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+     <authStack.Screen
+      name="ChatScreen"
+      component={ChatScreen}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+      <authStack.Screen
+      name="ChatInfo"
+      component={ChatInfo}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    <authStack.Screen
+      name="ChatHistory"
+      component={ChatHistory}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+     <authStack.Screen
+      name="PhotosAndVideos"
+      component={PhotosAndVideos}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+       <authStack.Screen
+      name="ChooseWallpaper"
+      component={ChooseWallpaper}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+
+<authStack.Screen
+      name="ChooseBackGround"
+      component={ChooseBackGround}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+        <authStack.Screen
+      name="ChooseImage"
+      component={ChooseImage}
+      options={{
+        animationEnabled: false,
+      }}
+    />
     
+
+<authStack.Screen
+      name="MyPost1"
+      component={MyPost1}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+<authStack.Screen
+      name="Moments"
+      component={Moments}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+
     <authStack.Screen
       name="BottomNavigator"
       component={BottomNavigator}
@@ -124,6 +206,7 @@ const AuthStackScreen = () => (
         animationEnabled: false,
       }}
     />
+    
   </authStack.Navigator>
 );
 
@@ -180,8 +263,8 @@ const BottomNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="ChatHistory"
-        component={ChatHistory}
+        name="Discover"
+        component={Discover}
         options={{
           tabBarLabel: () => (
             <Text style={{ fontSize: 12, lineHeight: 15, fontWeight: "400" }}>
@@ -202,8 +285,8 @@ const BottomNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="ChatInfo"
-        component={ChatInfo}
+        name="Profile"
+        component={Profile}
         options={{
           tabBarLabel: () => (
             <Text style={{ fontSize: 12, lineHeight: 15, fontWeight: "400" }}>

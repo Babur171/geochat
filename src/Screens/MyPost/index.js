@@ -5,6 +5,7 @@ import {
     Text,
     Pressable,
     Image,
+    TouchableOpacity,
 } from "react-native"
 
 import { styles } from "./styles";
@@ -28,7 +29,7 @@ export const MyPost = ({ navigation }) => {
         <View style={styles.container}>
             <View style={{ backgroundColor: "#BBD3FB" }}>
                 <View style={styles.header}>
-                    <Pressable><Image source={require(
+                    <Pressable onPress={()=>navigation.goBack()}><Image source={require(
                         // @ts-ignore
                         "../../Assets/back1.png")} style={styles.m12} />
                     </Pressable>
@@ -50,14 +51,14 @@ export const MyPost = ({ navigation }) => {
             </View>
             {
                 selected1 &&
-                <View style={styles.sectionContainer1}>
+                <TouchableOpacity style={styles.sectionContainer1} onPress={()=>navigation.navigate("MyPost1")}>
                     <View style={styles.switchContainer}>
                         <Text style={styles.label}>Time Capsule History</Text>
                         <Image source={require(
                             // @ts-ignore
                             "../../Assets/next.png")} style={styles.m12} />
                     </View>
-                </View>
+                </TouchableOpacity>
             }
         </View>
     );

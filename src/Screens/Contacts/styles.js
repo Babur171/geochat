@@ -103,6 +103,10 @@ elevation: 8,
     flexDirection:'row', 
     alignItems:'center'
   },
+  lastBoxRow:{
+    flexDirection:'row', 
+    alignItems:'center'
+  },
   firstBoxImg:{
     height:52,
     width:59,

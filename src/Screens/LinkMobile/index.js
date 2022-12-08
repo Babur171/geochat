@@ -10,7 +10,7 @@ import {
 import { Button } from "@/Components/Button";
 import { styles } from "./styles";
 import { Input } from "@/Components/TextInput";
-export default  LinkMobile = () => {
+export default  LinkMobile = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -20,45 +20,34 @@ export default  LinkMobile = () => {
       >
         <View
           style={[
-            styles.titleContainer,styles.main
+            styles.main
             
           ]}
         >
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.goBack()}>
             <Image
               // @ts-ignore
               source={require("../../Assets/back.png")}
               style={styles.img}
             />
           </TouchableOpacity>
-          <Text style={{ fontSize: 26, fontWeight: "400", marginLeft:97}}>
+          <Text style={{ fontSize: 26, fontWeight: "400",}}>
           Link Mobile
           </Text>
-         
+         <View></View>
         </View>
-        <View style={{marginLeft:154,marginTop:22,position:"relative"}}>
+        <View style={{alignItems:'center',marginTop:22,}}>
         <Image
               // @ts-ignore
               source={require("../../Assets/mobile.png")}
-              style={[styles.img,{width:50,height:50, }]}
+              style={[styles.mobileImg]}
             />
-            {/* <Image
-              // @ts-ignore
-              source={require("../../Assets/circle.png")}
-              style={[styles.img,{width:32,height:32,position:"absolute",marginLeft:23,marginTop:15}]}
-            />
-            <Image
-              // @ts-ignore
-              source={require("../../Assets/ok.png")}
-              style={[styles.img,{width:17,height:13,position:"absolute",marginTop:23,marginLeft:32}]}
-            /> */}
         </View>
         <View>
           <Text style={{ marginTop: 45, marginLeft: 37,fontSize:20 }}>
           Linked Phone number: 186581666494
           </Text>
-          
-          <Text style={{ marginTop: 7, marginHorizontal: 47,fontSize:13 }}>
+          <Text style={{ marginTop: 7, textAlign:'center',marginHorizontal:47, fontSize:13 }}>
           After uploading your mobile contacts, you can see which mobile contacts also have an accounts.
           </Text>
         </View>

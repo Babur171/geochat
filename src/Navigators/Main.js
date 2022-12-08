@@ -27,6 +27,12 @@ import Security from "@/Screens/Security";
 import AddContact from "@/Screens/AddContact";
 import EditContact from "@/Screens/EditContact";
 import LinkMobile from "@/Screens/LinkMobile";
+import { SelectBank } from "@/Screens/SelectBank";
+import { SelectTransferMethod } from "@/Screens/SelectTransferMethod";
+import { SplitBill } from "@/Screens/SplitBill";
+import { TransactionHistory } from "@/Screens/TransactionHistory";
+import { TransferToBank } from "@/Screens/TransferToBank";
+
 
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -35,6 +41,8 @@ const Tab = createBottomTabNavigator();
 
 const { width } = Dimensions.get("window");
 import { Images } from "@/Theme";
+import { PayeesPhoneNumber } from "@/Screens/PayeesPhoneNumber";
+import { RewardSetting } from "@/Screens/RewardSetting";
 
 // @refresh reset
 const BottomNavigator = (props) => {
@@ -94,8 +102,8 @@ const BottomNavigator = (props) => {
         }}
       />
       <Tab.Screen
-        name="ChatHistory"
-        component={ChatHistory}
+        name="Discover"
+        component={Discover}
         options={{
           tabBarLabel: () => (
             <Text style={{ fontSize: 12, lineHeight: 15, fontWeight: "400" }}>
@@ -200,13 +208,13 @@ const MainNavigator = () => (
         animationEnabled: false,
       }}
     />
-    <mainStack.Screen
+    {/* <mainStack.Screen
       name="Discover"
       component={Discover}
       options={{
         animationEnabled: false,
       }}
-    />
+    /> */}
     <mainStack.Screen
       name="Moments"
       component={Moments}
@@ -285,6 +293,55 @@ const MainNavigator = () => (
         animationEnabled: false,
       }}
     />
+    <mainStack.Screen
+name="SelectBank"
+component={SelectBank}
+options={{
+  animationEnabled: false,
+}}
+/>
+ <mainStack.Screen
+ name="SelectTransferMethod"
+ component={SelectTransferMethod}
+ options={{
+   animationEnabled: false,
+ }}
+/>
+ <mainStack.Screen
+ name="SplitBill"
+ component={SplitBill}
+ options={{
+   animationEnabled: false,
+ }}
+/>
+ <mainStack.Screen
+ name="TransactionHistory"
+ component={TransactionHistory}
+ options={{
+   animationEnabled: false,
+ }}
+/>
+ <mainStack.Screen
+ name="TransferToBank"
+ component={TransferToBank}
+ options={{
+   animationEnabled: false,
+ }}
+/>
+ <mainStack.Screen
+ name="PayeesPhoneNumber"
+ component={PayeesPhoneNumber}
+ options={{
+   animationEnabled: false,
+ }}
+/>
+ <mainStack.Screen
+ name="RewardSetting"
+ component={RewardSetting}
+ options={{
+   animationEnabled: false,
+ }}
+/>
   </mainStack.Navigator>
 );
 

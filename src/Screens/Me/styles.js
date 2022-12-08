@@ -8,15 +8,27 @@ export const styles = StyleSheet.create({
         width: windowWidth,
         backgroundColor: "#D9E7FD",
     },
+    extrabigImage:{
+        height:155,
+    // width:390
+        },
+    bigImage:{
+    height:130,
+// width:390
+    },
+    small:{
+        height:60,
+    // width:390
+        },
     walletCard: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        paddingHorizontal: 15, marginTop: 30
+        paddingHorizontal: 15, marginTop: 30,
     },
     walletInner: {
         display: "flex",
-        flexDirection: "row"
+        flexDirection: "row",
     },
     imgContainer: {
         height: 75,
@@ -73,18 +85,8 @@ export const styles = StyleSheet.create({
     secContainer: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginTop: -5, height: 45, paddingLeft: 100 },
     header: {
         alignSelf: "center",
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-
-        elevation: 2,
-        width: "102%",
+        width: "100%",
         marginTop: -10,
-        paddingBottom: 10
     },
     switchContainer1: {
         flexDirection: "row",
@@ -94,17 +96,16 @@ export const styles = StyleSheet.create({
     },
     sectionContainer: {
         paddingHorizontal: 15,
-        width: "102%",
+        width: "100%",
         alignSelf: "center",
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-
-        elevation: 2,
+        // shadowColor: "#000",
+        // shadowOffset: {
+        //     width: 0,
+        //     height: 1,
+        // },
+        // shadowOpacity: 0.25,
+        // shadowRadius: 3.84,
+        // elevation: 2,
     },
 
     switchContainer: {
@@ -126,18 +127,11 @@ export const styles = StyleSheet.create({
         resizeMode: "contain", marginRight: 10
     },
     sectionContainer1: {
-        width: "102%",
+        width: "100%",
         alignSelf: "center",
-        paddingVertical: 5,
-        marginTop: 0,
+        // paddingVertical: 5,
+        // marginTop: 0,
         paddingHorizontal: 15,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.20,
-        shadowRadius: 1.41,
-        elevation: 2,
+       
     }
 })

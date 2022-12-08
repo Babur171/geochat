@@ -77,11 +77,7 @@ export default Contacts = ({ navigation }) => {
               <Image source={Images.Tags} style={styles.boxStyle} />
               <Text style={styles.lineText}>Tags</Text>
             </View>
-            <View style={styles.firstBoxRow}>
-              <Image source={Images.OnePerson} style={styles.boxStyle} />
-              <Text style={styles.lineText}>Official Accounts</Text>
-            </View>
-            <View style={styles.firstBoxRow}>
+            <View style={styles.lastBoxRow}>
               <Image source={Images.OnePerson} style={styles.boxStyle} />
               <Text style={styles.lineText}>Official Accounts</Text>
             </View>

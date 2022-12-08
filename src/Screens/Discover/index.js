@@ -22,7 +22,7 @@ export const Discover = ({ navigation }) => {
         <View style={styles.container}>
             <ImageBackground source={require("../../Assets/signup.png")} resizeMode="cover" style={styles.blurImageStyle}>
                 <View style={styles.header}>
-                    <Pressable><Image source={require(
+                    <Pressable  onPress={()=>navigation.goBack()}><Image source={require(
                         // @ts-ignore
                         "../../Assets/back.png")} style={styles.m12} />
                     </Pressable>
@@ -48,11 +48,11 @@ export const Discover = ({ navigation }) => {
                         "../../Assets/plus.png")} style={[styles.m13]} />
                 </View>
 
-                <Pressable style={[styles.sectionContainer, {marginVertical: 10}]}>
+                <Pressable style={[styles.sectionContainer, {marginVertical: 10}]} onPress={()=>navigation.navigate("Moments")}>
                     <View style={styles.switchContainer1}>
                         <Image source={require(
                             // @ts-ignore
-                            "../../Assets/chart.png")} style={styles.wheel} />
+                            "../../Assets/wheel.png")} style={styles.wheel} />
                         <Text style={styles.label}>Moments</Text>
                     </View>
                     <View style={[styles.leftSect, { borderBottomWidth: 0 }]}>
@@ -71,8 +71,8 @@ export const Discover = ({ navigation }) => {
                         <View style={styles.switchContainer}>
                             <Image source={require(
                                 // @ts-ignore
-                                "../../Assets/redcircle.png")} style={styles.wheel} />
-                            <Text style={styles.label}>Moments</Text>
+                                "../../Assets/chart.png")} style={styles.wheel} />
+                            <Text style={styles.label}>Channels</Text>
                         </View>
                         <View style={styles.switchContainer}>
                             <Image source={require(
@@ -88,8 +88,8 @@ export const Discover = ({ navigation }) => {
                         <View style={styles.switchContainer}>
                             <Image source={require(
                                 // @ts-ignore
-                                "../../Assets/wheel.png")} style={styles.wheel} />
-                            <Text style={styles.label}>Moments</Text>
+                                "../../Assets/redcircle.png")} style={styles.wheel} />
+                            <Text style={styles.label}>Live Stream</Text>
                         </View>
                         <View style={styles.switchContainer}>
                             <Image source={require(
@@ -105,7 +105,7 @@ export const Discover = ({ navigation }) => {
                             <Image source={require(
                                 // @ts-ignore
                                 "../../Assets/light-minus.png")} style={styles.wheel} />
-                            <Text style={styles.label}>Moments</Text>
+                            <Text style={styles.label}>Scan</Text>
                         </View>
                         <View style={styles.switchContainer}>
                         <Text></Text>
@@ -119,8 +119,8 @@ export const Discover = ({ navigation }) => {
                         <View style={styles.switchContainer}>
                             <Image source={require(
                                 // @ts-ignore
-                                "../../Assets/mobile.png")} style={styles.wheel} />
-                            <Text style={styles.label}>Moments</Text>
+                                "../../Assets/newPhone.png")} style={styles.wheel} />
+                            <Text style={styles.label}>Shake</Text>
                         </View>
                         <View style={styles.switchContainer}>
                             <Image source={require(
@@ -135,7 +135,7 @@ export const Discover = ({ navigation }) => {
                             <Image source={require(
                                 // @ts-ignore
                                 "../../Assets/setting.png")} style={styles.wheel} />
-                            <Text style={styles.label}>Moments</Text>
+                            <Text style={styles.label}>Top Stories</Text>
                         </View>
                         <View style={styles.switchContainer}>
                            <Text></Text>
@@ -150,7 +150,7 @@ export const Discover = ({ navigation }) => {
                             <Image source={require(
                                 // @ts-ignore
                                 "../../Assets/usersearch.png")} style={styles.wheel} />
-                            <Text style={styles.label}>Moments</Text>
+                            <Text style={styles.label}>Search</Text>
                         </View>
                         <View style={styles.switchContainer}>
                             <Image source={require(
@@ -165,7 +165,7 @@ export const Discover = ({ navigation }) => {
                         <Image source={require(
                             // @ts-ignore
                             "../../Assets/rainbow1.png")} style={styles.wheel} />
-                        <Text style={styles.label}>Moments</Text>
+                        <Text style={styles.label}>Top Stories</Text>
                     </View>
                     <View style={[styles.leftSect, { borderBottomWidth: 0 }]}>
                        <Text />
@@ -180,7 +180,7 @@ export const Discover = ({ navigation }) => {
                         <Image source={require(
                             // @ts-ignore
                             "../../Assets/rect.png")} style={styles.wheel} />
-                        <Text style={styles.label}>Moments</Text>
+                        <Text style={styles.label}>Games</Text>
                     </View>
                     <View style={[styles.leftSect, { borderBottomWidth: 0 }]}>
                        <Text />
@@ -195,7 +195,7 @@ export const Discover = ({ navigation }) => {
                         <Image source={require(
                             // @ts-ignore
                             "../../Assets/s.png")} style={styles.wheel} />
-                        <Text style={styles.label}>Moments</Text>
+                        <Text style={styles.label}>Mini Programs</Text>
                     </View>
                     <View style={[styles.leftSect, { borderBottomWidth: 0 }]}>
                        <Text />

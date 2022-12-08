@@ -6,7 +6,7 @@ import {
     Pressable,
     Image,
     Switch,
-
+    TouchableOpacity
 } from "react-native"
 
 import { styles } from "./styles";
@@ -16,7 +16,7 @@ export const ChooseBackGround = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={[styles.inputText, { paddingHorizontal: 20, paddingVertical: 10 }]}>
-                <Pressable><Image source={require(
+                <Pressable onPress={()=>navigation.goBack()}><Image source={require(
                     // @ts-ignore
                     "../../Assets/back.png")} style={styles.m12} />
                 </Pressable>
@@ -25,18 +25,18 @@ export const ChooseBackGround = ({ navigation }) => {
             </View>
 
             <View style={styles.sectionContainer}>
-                <View style={styles.switchContainer}>
+                <TouchableOpacity onPress={()=>navigation.navigate("ChooseWallpaper")} style={styles.switchContainer}>
                     <Text style={styles.label}>Choose a wallpaper</Text>
                     <Image source={require(
                     // @ts-ignore
                     "../../Assets/next.png")} style={styles.m12} />
-                </View>
-                <View style={styles.switchContainer}>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate("ChooseImage")} style={styles.switchContainer}>
                     <Text style={styles.label}>Choose Photo</Text>
                     <Image source={require(
                     // @ts-ignore
                     "../../Assets/next.png")} style={styles.m12} />
-                </View>
+                </TouchableOpacity>
                 <View style={styles.switchContainer1}>
                     <Text style={styles.label}>Take Photo</Text>
                     <Image source={require(

@@ -6,6 +6,7 @@ import {
     Pressable,
     Image,
     Switch,
+    TouchableOpacity,
 } from "react-native"
 
 import { styles } from "./styles";
@@ -73,10 +74,11 @@ export const ChatInfo = ({ navigation }) => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <View style={[styles.inputText, {paddingHorizontal: 10}]}>
-
+                <TouchableOpacity onPress={()=>navigation.goBack()}>
                     <Image source={require(
                         // @ts-ignore
                         "../../Assets/back.png")} style={styles.m12} />
+                        </TouchableOpacity>
                     <Text style={{ fontSize: 17, fontWeight: "bold", color: "#000" }}>Chat Info</Text>
 
                     <Text></Text>
@@ -88,21 +90,21 @@ export const ChatInfo = ({ navigation }) => {
                             // @ts-ignore
                             "../../Assets/profileimg.png")} style={styles.image1} />
                     </View>
-                    <View style={styles.imgContainer}>
+                    <TouchableOpacity onPress={()=>navigation.navigate("PhotosAndVideos")} style={styles.imgContainer}>
                         <Image source={require(
                             // @ts-ignore
                             "../../Assets/addfile.png")} style={styles.image1} />
-                    </View>
+                    </TouchableOpacity>
                 </View>
 
             </View>
 
-            <View style={[styles.inputText, { backgroundColor: "#fff", paddingVertical: 10,  paddingLeft: 20, paddingRight: 10, color: "#000", marginTop: 20}]}>
+            <TouchableOpacity style={[styles.inputText, { backgroundColor: "#fff", paddingVertical: 10,  paddingLeft: 20, paddingRight: 10, color: "#000", marginTop: 20}]}>
                 <Text style={{}}>Search Chat History</Text>
                 <Image source={require(
                     // @ts-ignore
                     "../../Assets/next.png")} style={styles.m12} />
-            </View>
+            </TouchableOpacity>
 
             <View style={styles.sectionContainer}>
                 <View style={styles.switchContainer}>
@@ -137,18 +139,18 @@ export const ChatInfo = ({ navigation }) => {
                 </View>
                 
             </View>
-            <View style={[styles.inputText, { backgroundColor: "#fff", paddingVertical: 10, paddingLeft: 20, paddingRight: 10, color: "#000", marginTop: 20 }]}>
+            <TouchableOpacity onPress={()=>navigation.navigate("ChooseBackGround")} style={[styles.inputText, { backgroundColor: "#fff", paddingVertical: 10, paddingLeft: 20, paddingRight: 10, color: "#000", marginTop: 20 }]}>
                 <Text style={{}}>Background</Text>
                 <Image source={require(
                     // @ts-ignore
                     "../../Assets/next.png")} style={styles.m12} />
-            </View>
-            <View style={[styles.inputText, { backgroundColor: "#fff", paddingVertical: 10, paddingLeft: 20, paddingRight: 10, color: "#000", marginTop: 20 }]}>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate("ChatHistory")} style={[styles.inputText, { backgroundColor: "#fff", paddingVertical: 10, paddingLeft: 20, paddingRight: 10, color: "#000", marginTop: 20 }]}>
                 <Text style={{}}>Clear Chat History</Text>
                 <Image source={require(
                     // @ts-ignore
                     "../../Assets/next.png")} style={styles.m12} />
-            </View>
+            </TouchableOpacity>
             <View style={[styles.inputText, { backgroundColor: "#fff", paddingVertical: 10,  paddingLeft: 20, paddingRight: 10, color: "#000", marginTop: 20 }]}>
                 <Text style={{}}>Report</Text>
                 <Image source={require(

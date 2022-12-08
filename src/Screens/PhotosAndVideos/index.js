@@ -8,6 +8,7 @@ import {
     Switch,
     TextInput,
     FlatList,
+    TouchableOpacity,
 } from "react-native"
 
 import { styles } from "./styles";
@@ -41,9 +42,11 @@ export const PhotosAndVideos = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={[styles.inputText, { paddingHorizontal: 20, paddingVertical: 10 }]}>
+                <TouchableOpacity onPress={()=>navigation.goBack()}>
                 <Image source={require(
                     // @ts-ignore
                     "../../Assets/back.png")} style={styles.m12} />
+                    </TouchableOpacity>
                 <Text style={{ fontSize: 17, color: "#000" }}>Photos and Videos</Text>
                 <Text style={{ fontSize: 17, color: "#000" }}>Select</Text>
             </View>

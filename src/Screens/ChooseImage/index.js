@@ -82,7 +82,7 @@ export const ChooseImage = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={[styles.inputText]}>
-                <Pressable><Image source={require(
+                <Pressable onPress={()=>navigation.goBack()}><Image source={require(
                     // @ts-ignore
                     "../../Assets/back.png")} style={styles.m12} />
                 </Pressable>
