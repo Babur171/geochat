@@ -91,7 +91,7 @@ export const ChattingList = ({ navigation }) => {
                 <View style={{ width: "100%", justifyContent: "center", alignItems: "center", marginTop: 75 }}>
                     {
                         data.map((item, index) =>
-                         <Pressable style={styles.walletCard} key = {index} onPress={() => navigation.navigate()}>
+                         <Pressable style={styles.walletCard} key = {index} onPress={() => navigation.navigate("ChatScreen")}>
                             <View style={styles.walletInner}>
                                 <View style={styles.imgContainer}>
                                     <Image source={{uri: "jg"}} style={styles.image1} />

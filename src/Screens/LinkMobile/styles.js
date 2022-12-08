@@ -9,9 +9,10 @@ export const styles = StyleSheet.create({
   },
   main: {
     flexDirection: "row",
-    marginTop: 24,
-    marginHorizontal: 20,
-    
+    marginTop: 15,
+    marginHorizontal: 15,
+    alignItems:'center',
+    justifyContent:'space-between'
 
   },
   blurImageStyle: {
@@ -23,8 +24,13 @@ export const styles = StyleSheet.create({
     resizeMode: "contain",
     width: 14,
     height: 14,
-    marginLeft: 15,
+    // marginLeft: 15,
   },
+  mobileImg:{
+    width:50,
+    height:50,
+    resizeMode: "contain",
+  }
   //   card:{
   //     backgroundColor: '#fff',
   //     width: 296,

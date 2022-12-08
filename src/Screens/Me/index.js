@@ -6,15 +6,15 @@ import {
     Pressable,
     Image,
     StyleSheet,
+    ImageBackground,
+    TouchableOpacity
 } from "react-native"
 
 import { styles } from "./styles";
 export const Profile = ({ navigation }) => {
-
-
-
     return (
         <View style={styles.container}>
+            <ImageBackground source={require("../../Assets/extrabig.png")} resizeMode="cover" style={styles.extrabigImage}>
             <View style={styles.header}>
                 <View style={styles.walletCard}>
                     <View style={styles.walletInner}>
@@ -47,9 +47,10 @@ export const Profile = ({ navigation }) => {
                         "../../Assets/messagedots.png")} style={styles.message} />
                 </View>
             </View>
-
+            </ImageBackground>
+            <ImageBackground source={require("../../Assets/big.png")} resizeMode="cover" style={styles.bigImage}>
             <View style={styles.sectionContainer}>
-                <View style={styles.switchContainer}>
+                <TouchableOpacity style={styles.switchContainer} onPress={()=>navigation.navigate("MyPost")}>
                     <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }}>
                         <Image source={require(
                             // @ts-ignore
@@ -59,7 +60,7 @@ export const Profile = ({ navigation }) => {
                     <Image source={require(
                         // @ts-ignore
                         "../../Assets/next.png")} style={styles.m12} />
-                </View>
+                </TouchableOpacity>
                 <View style={styles.switchContainer}>
                     <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }}>
                         <Image source={require(
@@ -83,7 +84,8 @@ export const Profile = ({ navigation }) => {
                         "../../Assets/next.png")} style={styles.m12} />
                 </View>
             </View>
-
+            </ImageBackground>
+            <ImageBackground source={require("../../Assets/extra.png")} resizeMode="cover" style={styles.small}>
             <View style={styles.sectionContainer1}>
                 <View style={styles.switchContainer}>
                 <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }}>
@@ -97,7 +99,7 @@ export const Profile = ({ navigation }) => {
                         "../../Assets/next.png")} style={styles.m12} />
                 </View>
             </View>
-
+            </ImageBackground>
         </View>
     );
 };

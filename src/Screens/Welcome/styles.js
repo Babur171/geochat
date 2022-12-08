@@ -40,8 +40,8 @@ export const styles = StyleSheet.create({
     },
     logo: {
         resizeMode: "cover",
-        width: 323,
-        height: 315,
+        width: 330,
+        height: 330,
       },
       titleContainer:{
         flexDirection: "row",
