@@ -18,19 +18,20 @@ export const ChattingList = ({ navigation }) => {
     const handleChange = async (text) => {
         setValue(text)
     }
-
     useEffect(() => {
         setData([
             {
                 id: 1,
                 title: "GEOFFROY",
                 message: "Done?",
+                image: require("../../Assets/Rectangle2.png")
 
             },
             {
                 id: 2,
                 title: "杰里布拉斯场",
                 message: "先生，你好",
+                image: require("../../Assets/Rectangle2.png")
 
 
             },
@@ -38,18 +39,21 @@ export const ChattingList = ({ navigation }) => {
                 id: 3,
                 title: "Muahmed Aness",
                 message: "where are you Sir?",
+                image: require("../../Assets/Rectangle3.png")
 
             },
             {
                 id: 1,
                 title: "网店群聊、我们聊天、视频通话等",
                 message: "这里的任何人",
+                image: require("../../Assets/Rectangle4.png")
 
             },
             {
                 id: 2,
                 title: "Nokuley bary",
                 message: "Halo",
+                image: require("../../Assets/Rectangle5.png")
 
 
             },
@@ -57,12 +61,14 @@ export const ChattingList = ({ navigation }) => {
                 id: 3,
                 title: "Church Group chat",
                 message: "Jesus is lord",
+                image: require("../../Assets/Rectangle6.png")
 
             },
             {
                 id: 1,
                 title: "交友网群",
                 message: "谁准备和我聊天？",
+                image: require("../../Assets/Rectangle2.png")
 
             },
         ]);
@@ -94,7 +100,7 @@ export const ChattingList = ({ navigation }) => {
                          <Pressable style={styles.walletCard} key = {index} onPress={() => navigation.navigate("ChatScreen")}>
                             <View style={styles.walletInner}>
                                 <View style={styles.imgContainer}>
-                                    <Image source={{uri: "jg"}} style={styles.image1} />
+                                    <Image source={item.image} style={styles.image1} />
                                 </View>
                                 <View style={styles.walletCarder}>
                                     <Text style={styles.eventName}>{item.title}</Text>

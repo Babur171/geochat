@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet , Dimensions} from "react-native";
+const windowWidth = Dimensions.get('window').width;
 export const styles = StyleSheet.create({
   container: {
     display: "flex",
@@ -26,6 +27,14 @@ export const styles = StyleSheet.create({
     height: 14,
     // marginLeft: 15,
   },
+  modalStyle: {
+    position: "absolute",
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    width: windowWidth,
+    justifyContent:'center'
+  },
+
   mobileImg:{
     width:50,
     height:50,

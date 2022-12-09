@@ -63,7 +63,7 @@ export const Tags = ({ navigation }) => {
         <View style={styles.container}>
             <ImageBackground source={require("../../Assets/signup.png")} resizeMode="cover" style={styles.blurImageStyle}>
                 <View style={styles.header}>
-                    <Pressable><Image source={require(
+                    <Pressable onPress={()=>navigation.goBack()}><Image source={require(
                         // @ts-ignore
                         "../../Assets/back.png")} style={styles.m12} />
                     </Pressable>

@@ -96,9 +96,6 @@ export const ChooseImage = ({ navigation }) => {
                     numColumns={3}
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={({ item }) => <Product product={item} navigation={navigation} />}
-                    columnWrapperStyle={{
-                        justifyContent: 'space-around'
-                    }}
                     showsVerticalScrollIndicator={false}
                 />
             </View>
@@ -109,9 +106,14 @@ export const ChooseImage = ({ navigation }) => {
 };
 
 const Product = ({ product, navigation }) => (
-    <Pressable onPress={() => navigation.navigate()}>
-        <Image source={product.image} style={ImgStyles.image} />
-    </Pressable>
+    <View style={{ paddingHorizontal: 5 }}>
+    <View style={{ marginVertical: 5 }}>
+      <Image source={product.image} style={{ width: 101, height: 107 }} />
+    </View>
+  </View>
+    // <Pressable onPress={() => navigation.navigate()}>
+    //     <Image source={product.image} style={ImgStyles.image} />
+    // </Pressable>
 )
 
 

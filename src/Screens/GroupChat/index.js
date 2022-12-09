@@ -5,21 +5,20 @@ import {
     Pressable,
     Image,
     Modal,
+    TouchableOpacity,
 } from "react-native"
 
 import { styles } from "./styles";
 export const GroupChat = ({ navigation }) => {
-
-
-
     return (
         <View style={[styles.container]}>
             <View style={styles.header}>
                 <View style={[styles.inputText, { paddingHorizontal: 20 }]}>
-
+                    <TouchableOpacity onPress={()=>navigation.goBack()}>
                     <Image source={require(
                         // @ts-ignore
                         "../../Assets/back.png")} style={styles.m12} />
+                        </TouchableOpacity>
                     <Text style={styles.heading}>Group Chat</Text>
 
                     <View style={styles.leftSect}>

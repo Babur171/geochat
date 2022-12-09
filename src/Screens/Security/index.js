@@ -10,13 +10,11 @@ import { styles } from "./style";
 import { Button } from "@/Components/Button";
 
 const Security = ({ navigation }) => {
-
-
     return (
         <View style={styles.container}>
             <ImageBackground source={require("../../Assets/securityBg.png")} resizeMode="cover" style={styles.blurImageStyle}>
                 <View style={styles.titleContainer}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>navigation.goBack()}>
                     <Image
                         // @ts-ignore
                         source={require("../../Assets/cross.png")}
@@ -24,11 +22,13 @@ const Security = ({ navigation }) => {
                     />
                     </TouchableOpacity>
                     <View style={{flexDirection:'row',marginTop:108}}>
+                        <TouchableOpacity onPress={()=>navigation.navigate("OTP")}>
                     <Image
                         // @ts-ignore
                         source={require("../../Assets/not.png")}
                         style={[styles.logo,{width:40,height:40,resizeMode:'contain',marginLeft:31}]}
                     />
+                    </TouchableOpacity>
                     <Text style={[styles.description,{marginLeft:22,fontSize:23,fontWeight:"700",color:'black'}]}>
                         Security Verification
                     </Text>
