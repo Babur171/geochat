@@ -28,6 +28,11 @@ import ChatScreen from "@/Screens/ChatScreen";
 import { PhotosAndVideos } from "@/Screens/PhotosAndVideos";
 import ChooseWallpaper from "@/Screens/ChooseWallpaper";
 import { ChooseBackGround } from "@/Screens/ChooseBackGround";
+import { GroupChat } from "@/Screens/GroupChat";
+import { SelectContact } from "@/Screens/SelectContact"
+import { PhoneVerification } from "@/Screens/PhoneVarification";
+import {SearchChatHistory} from "@/Screens/SearchChatHistory";
+import { OfficialAccount } from "@/Screens/OfficialAccount";
 
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -167,6 +172,43 @@ const AuthStackScreen = () => (
         animationEnabled: false,
       }}
     />
+     <authStack.Screen
+      name="GroupChat"
+      component={GroupChat}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    <authStack.Screen
+      name="SelectContact"
+      component={SelectContact}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    <authStack.Screen
+      name="PhoneVerification"
+      component={PhoneVerification}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+     <authStack.Screen
+      name="SearchChatHistory"
+      component={SearchChatHistory}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+     <authStack.Screen
+      name="OfficialAccount"
+      component={OfficialAccount}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    
+    
 
 <authStack.Screen
       name="ChooseBackGround"

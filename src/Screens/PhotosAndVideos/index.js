@@ -83,7 +83,7 @@ export const PhotosAndVideos = ({ navigation }) => {
 
 
 const Product = ({ product, navigation }) => (
-    <Pressable onPress={() => navigation.navigate()}>
+    <Pressable onPress={() => navigation.navigate('')}>
         <Image source={product.image} style={ImgStyles.image} />
     </Pressable>
 )

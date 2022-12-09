@@ -18,6 +18,7 @@ export const styles = StyleSheet.create({
         resizeMode: "contain"
     },
     productsContainer: {
-		paddingHorizontal: 10,
+		paddingHorizontal: 30,
+        flex:1
 	},
 })

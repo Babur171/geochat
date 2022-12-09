@@ -18,9 +18,6 @@ export const PhoneVerification = ({ navigation }) => {
     const handleChange = async (text) => {
         setValue(text)
     }
-
-
-
     return (
         <View style={styles.container}>
             <ImageBackground source={require("../../Assets/signup.png")} resizeMode="cover" style={styles.blurImageStyle}>
@@ -36,7 +33,7 @@ export const PhoneVerification = ({ navigation }) => {
                 <Text style={{ fontSize: 13, color: "#000", paddingHorizontal: 15, paddingVertical: 20, lineHeight: 17 }}>If  you change your phone number, you can log in with the new one.
                     Your current phone number is 185 58166494</Text>
                 <View style={styles.inputText}>
-                    <View style={{ flex: 1, justifyContent: "flex-start", alignItems: "center", flexDirection: "row", }}>
+                    <View style={{ flex: 1, justifyContent: "flex-start", alignItems: "center", marginHorizontal:10, flexDirection: "row", }}>
                         <View style={{justifyContent: "flex-start", alignItems: "center",}}>
                             <Text style={{color: "#000"}}>+19</Text>
                             <Text style={{fontSize: 12, color: "#000", marginRight: -15}}>china</Text>

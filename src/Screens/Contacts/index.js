@@ -53,9 +53,9 @@ export default Contacts = ({ navigation }) => {
           <TouchableOpacity style={{ marginRight: 10 }}>
             <Image source={Images.Search} style={styles.searchIocn} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>navigation.navigate("AddContact")}>
+          <View >
             <Image source={Images.Plus} style={styles.plusIcon} />
-          </TouchableOpacity>
+          </View>
         </View>
       </View>
       <View>
@@ -63,23 +63,33 @@ export default Contacts = ({ navigation }) => {
           <View style={{ marginVertical: 12, marginLeft: 17 }}>
             <View style={styles.firstBoxRow}>
               <Image source={Images.PlusPerson} style={styles.boxStyle} />
+              <TouchableOpacity onPress={()=>navigation.navigate("AddContact")}>
               <Text style={styles.lineText}>New Friends</Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.firstBoxRow}>
               <Image source={Images.PersonCirle} style={styles.boxStyle} />
+              <TouchableOpacity onPress={()=>navigation.navigate("SearchFriends")}>
               <Text style={styles.lineText}>Chats only Friends</Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.firstBoxRow}>
               <Image source={Images.BothPerson} style={styles.boxStyle} />
+              <TouchableOpacity onPress={()=>navigation.navigate("GroupChat")}>
               <Text style={styles.lineText}>Group Chats</Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.firstBoxRow}>
               <Image source={Images.Tags} style={styles.boxStyle} />
+              <TouchableOpacity onPress={()=>navigation.navigate("Tags")}>
               <Text style={styles.lineText}>Tags</Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.lastBoxRow}>
               <Image source={Images.OnePerson} style={styles.boxStyle} />
+              <TouchableOpacity onPress={()=>navigation.navigate("OfficialAccount")}>
               <Text style={styles.lineText}>Official Accounts</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

@@ -65,7 +65,7 @@ export const SearchFriends = ({ navigation }) => {
         <View style={styles.container}>
             <ImageBackground source={require("../../Assets/signup.png")} resizeMode="cover" style={styles.blurImageStyle}>
                 <View style={styles.header}>
-                    <Pressable><Image source={require(
+                    <Pressable onPress={()=>navigation.goBack()}><Image source={require(
                         // @ts-ignore
                         "../../Assets/back.png")} style={styles.m12} />
                     </Pressable>
@@ -111,7 +111,7 @@ export const SearchFriends = ({ navigation }) => {
                 </View>
                 <Text style={{ fontSize: 20, textAlign: "center", color: "#000" }}>6 Friends</Text>
                 <View style={styles.footer}>
-                    <Footer setModalVisible={setModalVisible} />
+                    <Footer setModalVisible={setModalVisible} navigation={navigation}/>
                 </View>
 
                 <Modal
@@ -144,14 +144,15 @@ export const SearchFriends = ({ navigation }) => {
     );
 };
 
-const Footer = props => {
-
+const Footer = ({navigation}) => {
     return (
         <View style={[footerStyles.footer]}>
             <Pressable onPress={() => props.setModalVisible(true)}>
                 <Text style={footerStyles.footerItem}>Add</Text>
             </Pressable>
+            <Pressable onPress={()=>navigation.navigate("SelectContact")}>
             <Text style={[footerStyles.footerItem, { paddingHorizontal: 17 }]}>Remove</Text>
+            </Pressable>
         </View>
     );
 };
